@@ -8,13 +8,14 @@ import { tap } from 'rxjs/operators';
 import { UserService } from '../../../../core/auth/services/user.service';
 import { RxLet } from '@rx-angular/template/let';
 import { IfAuthenticatedDirective } from '../../../../core/auth/if-authenticated.directive';
+import { BannerAccordionComponent } from '../../../../shared/components/banner-accordion.component';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  imports: [NgClass, ArticleListComponent, RxLet, IfAuthenticatedDirective],
+  imports: [NgClass, ArticleListComponent, RxLet, IfAuthenticatedDirective, BannerAccordionComponent],
 })
 export default class HomeComponent implements OnInit {
   isAuthenticated = false;
